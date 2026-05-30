@@ -1,20 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
+    <title>Modern QR Code Generator</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <p>Enter your text or URL</p>
-        <input type="text" placeholder="Text or URL" id="qrText">
-        <div id="imgBox">
-            <img src="" id="qrImage">
+
+    <div class="wrapper">
+
+        <!-- TOP AREA -->
+
+        <div class="top-section">
+
+            <div class="qr-icon-box">
+
+                <div class="sparkle sparkle1">
+                    <i class="ri-sparkling-line"></i>
+                </div>
+
+                <div class="sparkle sparkle2">
+                    <i class="ri-sparkling-line"></i>
+                </div>
+
+                <div class="main-icon">
+                    <i class="ri-qr-code-line"></i>
+                </div>
+
+            </div>
+
+            <h1>
+                Generate
+                <span>QR Code</span>
+            </h1>
+
+            <div class="line-design">
+                <span></span>
+                <div class="dot"></div>
+                <span></span>
+            </div>
+
+            <p class="top-text">
+                Enter any text or URL to generate
+                a QR code instantly.
+            </p>
+
         </div>
-        <button onclick="generateQR()">Generate QR Code</button>
+
+        <!-- INPUT SECTION -->
+
+        <div class="input-section">
+
+            <label>
+                <div class="label-icon">
+                    <i class="ri-link"></i>
+                </div>
+
+                Enter your text or URL
+            </label>
+
+            <div class="input-box">
+
+                <input
+                    type="text"
+                    placeholder="Text or URL"
+                    id="qrText">
+
+                <button
+                    class="clear-btn"
+                    id="clearBtn">
+                    <i class="ri-close-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- QR RESULT -->
+
+        <div class="qr-result" id="qrResult">
+
+            <div class="qr-left">
+
+                <div class="qr-image-box">
+                    <img src="" id="qrImage">
+                </div>
+
+            </div>
+
+            <div class="qr-right">
+
+                <div class="ready-box">
+
+                    <div class="check-icon">
+                        <i class="ri-check-line"></i>
+                    </div>
+
+                    <div>
+                        <h3>Your QR Code is Ready!</h3>
+                        <p>Scan or download your QR code.</p>
+                    </div>
+
+                </div>
+
+                <div class="action-buttons">
+
+                    <button onclick="downloadQR()">
+                        <i class="ri-download-line"></i>
+                        <span>Download</span>
+                    </button>
+
+                    <button onclick="copyText()">
+                        <i class="ri-file-copy-line"></i>
+                        <span>Copy</span>
+                    </button>
+
+                    <button onclick="shareQR()">
+                        <i class="ri-share-line"></i>
+                        <span>Share</span>
+                    </button>
+
+                    <button onclick="generateNew()">
+                        <i class="ri-refresh-line"></i>
+                        <span>Generate New</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- GENERATE BUTTON -->
+
+        <button
+            class="generate-btn"
+            onclick="generateQR()">
+
+            <i class="ri-qr-code-line"></i>
+            Generate QR Code
+
+        </button>
+
+        <!-- SUPPORT BOX -->
+
+        <div class="support-box">
+
+            <div class="support-icon">
+                <i class="ri-lightbulb-flash-line"></i>
+            </div>
+
+            <p>
+                Supports text, URLs, email, phone numbers & more.
+            </p>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+            <i class="ri-heart-fill"></i>
+            Designed & Developed by <span>Kanwal Imran</span>
+        </div>
+
     </div>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
